@@ -356,6 +356,26 @@
 				);
 			<% end %>
 
+			function ipaddr(tmp) {
+				var a = tmp.split(".");
+				for (var i = 0; i < a.length; i++) {
+				while (a[i].length < 3) {
+					a[i] = "0" + a[i];
+					}
+				}
+				return a[0] + a[1] + a[2] + a[3];
+			}
+
+			function displayIP(tmp) {
+				var a = tmp.split(".");
+				for (var i = 0; i < a.length; i++) {
+					while (a[i].length < 3) {
+						a[i] = "0" + a[i];
+					}
+				}
+				return a[0] + "." + a[1] + "." + a[2] + "." + a[3];
+			}
+
 			<% if has_dhcp then %>
 			var ls = document.getElementById('lease_status_table');
 			if (ls)
@@ -364,6 +384,13 @@
 				while( ls.rows.length > 1 )
 					ls.rows[0].parentNode.deleteRow(1);
 
+				info.leases.sort(
+					function(a, b) {
+						return (ipaddr(a.ipaddr) < ipaddr(b.ipaddr) ? -1 : 
+							(ipaddr(a.ipaddr) > ipaddr(b.ipaddr) ? 1: 0));
+					}
+				);
+				
 				for( var i = 0; i < info.leases.length; i++ )
 				{
 					var timestr;

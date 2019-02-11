@@ -13,6 +13,26 @@
 
 	var hosts = <%=luci.http.write_json(luci.sys.net.host_hints())%>;
 
+    function ipaddr(tmp) {
+        var a = tmp.split(".");
+        for (var i = 0; i < a.length; i++) {
+        while (a[i].length < 3) {
+            a[i] = "0" + a[i];
+            }
+        }
+        return a[0] + a[1] + a[2] + a[3];
+    }
+
+    function displayIP(tmp) {
+        var a = tmp.split(".");
+        for (var i = 0; i < a.length; i++) {
+            while (a[i].length < 3) {
+                a[i] = "0" + a[i];
+            }
+        }
+        return a[0] + "." + a[1] + "." + a[2] + "." + a[3];
+    }
+
 	XHR.poll(5, '<%=url('admin/network/dhcplease_status')%>', null,
 		function(x, st)
 		{
@@ -22,6 +42,13 @@
 				/* clear all rows */
 				while( tb.rows.length > 1 )
 					tb.deleteRow(1);
+				
+				st[0].sort(
+					function(a, b) {
+						return (ipaddr(a.ipaddr) < ipaddr(b.ipaddr) ? -1 : 
+							(ipaddr(a.ipaddr) > ipaddr(b.ipaddr) ? 1: 0));
+					}
+				);
 
 				for( var i = 0; i < st[0].length; i++ )
 				{
