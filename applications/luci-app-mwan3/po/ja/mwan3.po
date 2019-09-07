@@ -7,7 +7,7 @@ msgstr ""
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 2.2\n"
+"X-Generator: Poedit 2.2.3\n"
 "Last-Translator: INAGAKI Hiroshi <musashino.open@gmail.com>\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 "Language: ja\n"
@@ -78,6 +78,10 @@ msgstr "%d 秒"
 msgid "%d seconds"
 msgstr "%d 秒"
 
+#: applications/luci-app-mwan3/luasrc/model/cbi/mwan/ruleconfig.lua:58
+msgid "-- Please choose --"
+msgstr "-- 選択してください --"
+
 #: applications/luci-app-mwan3/luasrc/model/cbi/mwan/interfaceconfig.lua:59
 msgid ""
 "Acceptable values: 1-100. This many Tracking IP addresses must respond for "
@@ -96,7 +100,7 @@ msgstr "利用可能な値: 1-256。空欄の場合のデフォルトは1です�
 
 #: applications/luci-app-mwan3/luasrc/model/cbi/mwan/globalsconfig.lua:32
 msgid "Alert"
-msgstr ""
+msgstr "アラート"
 
 #: applications/luci-app-mwan3/luasrc/controller/mwan3.lua:177
 msgid "All required IP rules for interface %s found"
@@ -127,19 +131,19 @@ msgstr "データ収集中です..."
 
 #: applications/luci-app-mwan3/luasrc/model/cbi/mwan/globalsconfig.lua:33
 msgid "Critical"
-msgstr ""
+msgstr "重大"
 
 #: applications/luci-app-mwan3/luasrc/model/cbi/mwan/globalsconfig.lua:38
 msgid "Debug"
-msgstr ""
+msgstr "デバッグ"
 
-#: applications/luci-app-mwan3/luasrc/model/cbi/mwan/ruleconfig.lua:29
 #: applications/luci-app-mwan3/luasrc/model/cbi/mwan/rule.lua:81
+#: applications/luci-app-mwan3/luasrc/model/cbi/mwan/ruleconfig.lua:29
 msgid "Destination address"
 msgstr "宛先アドレス"
 
-#: applications/luci-app-mwan3/luasrc/model/cbi/mwan/ruleconfig.lua:33
 #: applications/luci-app-mwan3/luasrc/model/cbi/mwan/rule.lua:87
+#: applications/luci-app-mwan3/luasrc/model/cbi/mwan/ruleconfig.lua:33
 msgid "Destination port"
 msgstr "宛先ポート"
 
@@ -170,21 +174,23 @@ msgstr ""
 
 #: applications/luci-app-mwan3/luasrc/model/cbi/mwan/globalsconfig.lua:31
 msgid "Emergency"
-msgstr ""
+msgstr "緊急"
 
-#: applications/luci-app-mwan3/luasrc/model/cbi/mwan/interfaceconfig.lua:22
 #: applications/luci-app-mwan3/luasrc/model/cbi/mwan/interface.lua:160
+#: applications/luci-app-mwan3/luasrc/model/cbi/mwan/interfaceconfig.lua:22
 msgid "Enabled"
 msgstr "有効"
 
-#: applications/luci-app-mwan3/luasrc/model/cbi/mwan/ruleconfig.lua:63
+#: applications/luci-app-mwan3/luasrc/model/cbi/mwan/ruleconfig.lua:64
 msgid ""
 "Enables firewall rule logging (global mwan3 logging must also be enabled)"
 msgstr ""
+"ファイアウォール ルールのログ記録を有効にします。（グローバルな mwan3 ログ記"
+"録も有効にする必要があります）"
 
 #: applications/luci-app-mwan3/luasrc/model/cbi/mwan/globalsconfig.lua:23
 msgid "Enables global firewall logging"
-msgstr ""
+msgstr "グローバルなファイアウォールのログ記録を有効にします。"
 
 #: applications/luci-app-mwan3/luasrc/model/cbi/mwan/globalsconfig.lua:16
 msgid "Enter value in hex, starting with <code>0x</code>"
@@ -192,7 +198,7 @@ msgstr "<code>0x</code> で始まる16進数の値を入力してください。
 
 #: applications/luci-app-mwan3/luasrc/model/cbi/mwan/globalsconfig.lua:34
 msgid "Error"
-msgstr ""
+msgstr "エラー"
 
 #: applications/luci-app-mwan3/luasrc/view/mwan/status_diagnostics.htm:81
 msgid "Execute"
@@ -208,7 +214,7 @@ msgstr "障害検出 インターバル"
 
 #: applications/luci-app-mwan3/luasrc/model/cbi/mwan/globalsconfig.lua:29
 msgid "Firewall loglevel"
-msgstr ""
+msgstr "ファイアウォール ログレベル"
 
 #: applications/luci-app-mwan3/luasrc/model/cbi/mwan/globalsconfig.lua:15
 msgid "Firewall mask"
@@ -260,15 +266,15 @@ msgstr "IPv6"
 
 #: applications/luci-app-mwan3/luasrc/model/cbi/mwan/globalsconfig.lua:37
 msgid "Info"
-msgstr ""
+msgstr "情報"
 
 #: applications/luci-app-mwan3/luasrc/model/cbi/mwan/interfaceconfig.lua:25
 msgid "Initial state"
 msgstr "初期状態"
 
 #: applications/luci-app-mwan3/luasrc/model/cbi/mwan/interface.lua:150
-#: applications/luci-app-mwan3/luasrc/model/cbi/mwan/memberconfig.lua:18
 #: applications/luci-app-mwan3/luasrc/model/cbi/mwan/member.lua:27
+#: applications/luci-app-mwan3/luasrc/model/cbi/mwan/memberconfig.lua:18
 #: applications/luci-app-mwan3/luasrc/view/mwan/status_detail.htm:10
 #: applications/luci-app-mwan3/luasrc/view/mwan/status_diagnostics.htm:10
 #: applications/luci-app-mwan3/luasrc/view/mwan/status_diagnostics.htm:62
@@ -277,13 +283,13 @@ msgstr "初期状態"
 msgid "Interface"
 msgstr "インターフェース"
 
-#: applications/luci-app-mwan3/luasrc/model/cbi/mwan/interfaceconfig.lua:209
 #: applications/luci-app-mwan3/luasrc/model/cbi/mwan/interface.lua:208
+#: applications/luci-app-mwan3/luasrc/model/cbi/mwan/interfaceconfig.lua:209
 msgid "Interface down"
 msgstr "インターフェース Down"
 
-#: applications/luci-app-mwan3/luasrc/model/cbi/mwan/interfaceconfig.lua:223
 #: applications/luci-app-mwan3/luasrc/model/cbi/mwan/interface.lua:219
+#: applications/luci-app-mwan3/luasrc/model/cbi/mwan/interfaceconfig.lua:223
 msgid "Interface up"
 msgstr "インターフェース Up"
 
@@ -309,8 +315,8 @@ msgstr ""
 msgid "Keep ping failure interval during failure state"
 msgstr ""
 
-#: applications/luci-app-mwan3/luasrc/model/cbi/mwan/policyconfig.lua:25
 #: applications/luci-app-mwan3/luasrc/model/cbi/mwan/policy.lua:75
+#: applications/luci-app-mwan3/luasrc/model/cbi/mwan/policyconfig.lua:25
 msgid "Last resort"
 msgstr "最終手段"
 
@@ -327,13 +333,13 @@ msgid "Loading"
 msgstr "読込中"
 
 #: applications/luci-app-mwan3/luasrc/model/cbi/mwan/globalsconfig.lua:22
-#: applications/luci-app-mwan3/luasrc/model/cbi/mwan/ruleconfig.lua:62
+#: applications/luci-app-mwan3/luasrc/model/cbi/mwan/ruleconfig.lua:63
 msgid "Logging"
-msgstr ""
+msgstr "ログ記録"
 
 #: applications/luci-app-mwan3/luasrc/model/cbi/mwan/globalsconfig.lua:28
 msgid "Loglevel"
-msgstr ""
+msgstr "ログレベル"
 
 #: applications/luci-app-mwan3/luasrc/model/cbi/mwan/globalsconfig.lua:8
 msgid "MWAN - Globals"
@@ -456,10 +462,10 @@ msgstr ""
 msgid "Members assigned"
 msgstr "アサイン済みメンバー"
 
-#: applications/luci-app-mwan3/luasrc/model/cbi/mwan/interfaceconfig.lua:245
 #: applications/luci-app-mwan3/luasrc/model/cbi/mwan/interface.lua:230
-#: applications/luci-app-mwan3/luasrc/model/cbi/mwan/memberconfig.lua:25
+#: applications/luci-app-mwan3/luasrc/model/cbi/mwan/interfaceconfig.lua:244
 #: applications/luci-app-mwan3/luasrc/model/cbi/mwan/member.lua:33
+#: applications/luci-app-mwan3/luasrc/model/cbi/mwan/memberconfig.lua:25
 msgid "Metric"
 msgstr "メトリック"
 
@@ -473,7 +479,7 @@ msgstr "最小パケットロス [%]"
 
 #: applications/luci-app-mwan3/luasrc/controller/mwan3.lua:190
 msgid "Missing both IP rules for interface %s"
-msgstr ""
+msgstr "インターフェース %s にどちらの IP ルールもありません。"
 
 #: applications/luci-app-mwan3/luasrc/model/cbi/mwan/ruleconfig.lua:57
 msgid ""
@@ -502,7 +508,7 @@ msgstr "インターフェース %s にトラッキングホストが指定さ�
 
 #: applications/luci-app-mwan3/luasrc/model/cbi/mwan/globalsconfig.lua:36
 msgid "Notice"
-msgstr ""
+msgstr "通知"
 
 #: applications/luci-app-mwan3/luasrc/controller/mwan3.lua:60
 msgid "Notification"
@@ -531,8 +537,8 @@ msgstr "Ping 回数"
 msgid "Ping default gateway"
 msgstr "デフォルト ゲートウェイへのping"
 
-#: applications/luci-app-mwan3/luasrc/model/cbi/mwan/interfaceconfig.lua:158
 #: applications/luci-app-mwan3/luasrc/model/cbi/mwan/interface.lua:192
+#: applications/luci-app-mwan3/luasrc/model/cbi/mwan/interfaceconfig.lua:158
 msgid "Ping interval"
 msgstr "Ping インターバル"
 
@@ -583,13 +589,13 @@ msgstr ""
 msgid "Policy"
 msgstr "ポリシー"
 
-#: applications/luci-app-mwan3/luasrc/model/cbi/mwan/ruleconfig.lua:65
 #: applications/luci-app-mwan3/luasrc/model/cbi/mwan/rule.lua:99
+#: applications/luci-app-mwan3/luasrc/model/cbi/mwan/ruleconfig.lua:66
 msgid "Policy assigned"
 msgstr "アサイン済みポリシー"
 
-#: applications/luci-app-mwan3/luasrc/model/cbi/mwan/ruleconfig.lua:36
 #: applications/luci-app-mwan3/luasrc/model/cbi/mwan/rule.lua:93
+#: applications/luci-app-mwan3/luasrc/model/cbi/mwan/ruleconfig.lua:36
 msgid "Protocol"
 msgstr "プロトコル"
 
@@ -650,13 +656,13 @@ msgstr ""
 msgid "Seconds. Acceptable values: 1-1000000. Defaults to 600 if not set"
 msgstr "秒。利用可能な値: 1-1000000。空欄の場合のデフォルト値は600です。"
 
-#: applications/luci-app-mwan3/luasrc/model/cbi/mwan/ruleconfig.lua:22
 #: applications/luci-app-mwan3/luasrc/model/cbi/mwan/rule.lua:69
+#: applications/luci-app-mwan3/luasrc/model/cbi/mwan/ruleconfig.lua:22
 msgid "Source address"
 msgstr "送信元アドレス"
 
-#: applications/luci-app-mwan3/luasrc/model/cbi/mwan/ruleconfig.lua:26
 #: applications/luci-app-mwan3/luasrc/model/cbi/mwan/rule.lua:75
+#: applications/luci-app-mwan3/luasrc/model/cbi/mwan/ruleconfig.lua:26
 msgid "Source port"
 msgstr "送信元ポート"
 
@@ -681,7 +687,7 @@ msgstr "タスク"
 msgid "There are currently %d of %d supported interfaces configured"
 msgstr "現在、%d 個中 %d 個のサポートされたインターフェースが設定済みです。"
 
-#: applications/luci-app-mwan3/luasrc/model/cbi/mwan/interfaceconfig.lua:246
+#: applications/luci-app-mwan3/luasrc/model/cbi/mwan/interfaceconfig.lua:245
 msgid ""
 "This displays the metric assigned to this interface in /etc/config/network"
 msgstr ""
@@ -734,13 +740,13 @@ msgstr ""
 msgid "Tracking hostname or IP address"
 msgstr "トラッキング ホスト名または IP アドレス"
 
-#: applications/luci-app-mwan3/luasrc/model/cbi/mwan/interfaceconfig.lua:40
 #: applications/luci-app-mwan3/luasrc/model/cbi/mwan/interface.lua:170
+#: applications/luci-app-mwan3/luasrc/model/cbi/mwan/interfaceconfig.lua:40
 msgid "Tracking method"
 msgstr "トラッキング方式"
 
-#: applications/luci-app-mwan3/luasrc/model/cbi/mwan/interfaceconfig.lua:58
 #: applications/luci-app-mwan3/luasrc/model/cbi/mwan/interface.lua:181
+#: applications/luci-app-mwan3/luasrc/model/cbi/mwan/interfaceconfig.lua:58
 msgid "Tracking reliability"
 msgstr "トラッキングの信頼性"
 
@@ -813,10 +819,10 @@ msgstr "コマンドを実行中です..."
 
 #: applications/luci-app-mwan3/luasrc/model/cbi/mwan/globalsconfig.lua:35
 msgid "Warning"
-msgstr ""
+msgstr "警告"
 
-#: applications/luci-app-mwan3/luasrc/model/cbi/mwan/memberconfig.lua:29
 #: applications/luci-app-mwan3/luasrc/model/cbi/mwan/member.lua:39
+#: applications/luci-app-mwan3/luasrc/model/cbi/mwan/memberconfig.lua:29
 msgid "Weight"
 msgstr "ウエイト"
 
@@ -832,36 +838,36 @@ msgstr ""
 msgid "Yes"
 msgstr "はい"
 
-#: applications/luci-app-mwan3/luasrc/model/cbi/mwan/interfaceconfig.lua:243
-msgid "always"
-msgstr "always"
-
-#: applications/luci-app-mwan3/luasrc/model/cbi/mwan/policyconfig.lua:29
 #: applications/luci-app-mwan3/luasrc/model/cbi/mwan/policy.lua:80
-#: applications/luci-app-mwan3/luasrc/model/cbi/mwan/ruleconfig.lua:72
+#: applications/luci-app-mwan3/luasrc/model/cbi/mwan/policyconfig.lua:29
+#: applications/luci-app-mwan3/luasrc/model/cbi/mwan/ruleconfig.lua:73
 msgid "blackhole (drop)"
 msgstr "blackhole (drop)"
 
-#: applications/luci-app-mwan3/luasrc/model/cbi/mwan/policyconfig.lua:30
+#: applications/luci-app-mwan3/luasrc/model/cbi/mwan/interfaceconfig.lua:241
+msgid "connected (mwan3)"
+msgstr "接続時 (mwan3)"
+
 #: applications/luci-app-mwan3/luasrc/model/cbi/mwan/policy.lua:82
-#: applications/luci-app-mwan3/luasrc/model/cbi/mwan/ruleconfig.lua:73
+#: applications/luci-app-mwan3/luasrc/model/cbi/mwan/policyconfig.lua:30
+#: applications/luci-app-mwan3/luasrc/model/cbi/mwan/ruleconfig.lua:74
 msgid "default (use main routing table)"
 msgstr "デフォルト（メインのルーティング テーブルを使用）"
 
-#: applications/luci-app-mwan3/luasrc/model/cbi/mwan/interfaceconfig.lua:241
-msgid "ifdown"
-msgstr "ifdown"
+#: applications/luci-app-mwan3/luasrc/model/cbi/mwan/interfaceconfig.lua:242
+msgid "disconnected (mwan3)"
+msgstr "切断時 (mwan3)"
 
 #: applications/luci-app-mwan3/luasrc/model/cbi/mwan/interfaceconfig.lua:240
-msgid "ifup"
-msgstr "ifup"
+msgid "ifdown (netifd)"
+msgstr "ifdown (netifd)"
 
-#: applications/luci-app-mwan3/luasrc/model/cbi/mwan/interfaceconfig.lua:242
-msgid "never"
-msgstr "never"
+#: applications/luci-app-mwan3/luasrc/model/cbi/mwan/interfaceconfig.lua:239
+msgid "ifup (netifd)"
+msgstr "ifup (netifd)"
 
-#: applications/luci-app-mwan3/luasrc/model/cbi/mwan/policyconfig.lua:28
 #: applications/luci-app-mwan3/luasrc/model/cbi/mwan/policy.lua:84
-#: applications/luci-app-mwan3/luasrc/model/cbi/mwan/ruleconfig.lua:71
+#: applications/luci-app-mwan3/luasrc/model/cbi/mwan/policyconfig.lua:28
+#: applications/luci-app-mwan3/luasrc/model/cbi/mwan/ruleconfig.lua:72
 msgid "unreachable (reject)"
 msgstr "unreachable (reject)"

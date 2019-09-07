@@ -49,7 +49,7 @@ XHR.poll(-1, '<%=luci.dispatcher.build_url("admin", "status", "mwan", "interface
 							state = '<%:Online%>';
 							time = String.format(
 								'<div><strong>Uptime: </strong>{0}</div>',
-								secondsToString(status.interfaces[iface].uptime)
+								secondsToString(status.interfaces[iface].online)
 							);
 							css = 'success';
 							break;
@@ -57,7 +57,7 @@ XHR.poll(-1, '<%=luci.dispatcher.build_url("admin", "status", "mwan", "interface
 							state = '<%:Offline%>';
 							time = String.format(
 								'<div><strong>Downtime: </strong>{0}</div>',
-								secondsToString(status.interfaces[iface].downtime)
+								secondsToString(status.interfaces[iface].offline)
 							);
 							css = 'danger';
 							break;
