@@ -1,4 +1,3 @@
-
 config udpconfig
 	option password 'pwd'
 	option timeout '3'
@@ -9,4 +8,3 @@ config udpconfig
 	option auto '1'
 	option clientport '15901'
 	option enable '1'
-
