@@ -2,7 +2,7 @@
 
 include $(TOPDIR)/rules.mk
 
-PKG_NAME:=luci-kcptools
+PKG_NAME:=luci-app-kcptools
 PKG_VERSION:=1.0.0
 PKG_RELEASE:=1
 
@@ -14,6 +14,7 @@ define Package/$(PKG_NAME)
 	SUBMENU:=3. Applications
 	TITLE:=LuCI for udp2raw and kcp-client
 	PKGARCH:=all
+	DEPENDS:=+kcptun-client +udp2raw-tunnel
 endef
 
 define Package/$(PKG_NAME)/description
