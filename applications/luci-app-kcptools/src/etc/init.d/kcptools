@@ -1,6 +1,9 @@
 #!/bin/sh /etc/rc.common
 START=90
 
+kcptun_pid=/var/run/kcptools_kcptun.pid
+udp2raw_pid=/var/run/kcptools_udp2raw.pid
+
 run_kcp()
 {
 	local server
@@ -15,8 +18,8 @@ run_kcp()
 	config_get clientport $1 clientport
 	config_get password $1 password
 
-	(kcp-client -r 127.0.0.1:22333 -l :$clientport --key $password -mode fast2 -mtu 1300   >/dev/null 2>&1 )&
-	(udp2raw -c -l127.0.0.1:22333 -r$server:$serverport --raw-mode faketcp -a -k $password >/dev/null 2>&1 )&
+	(kcptun-client -l $client:$clientport -r 127.0.0.1:22333 --key $password -mode fast2 -nocomp -sockbuf 16777217 -mtu 1300 >/dev/null 2>&1 ) & echo $!>$kcptun_pid &
+	(udp2raw -c -l127.0.0.1:22333 -r$server:$serverport --raw-mode faketcp -a -k $password >/dev/null 2>&1 ) & echo $!>$udp2raw_pid &
 }
 
 start()
@@ -27,7 +30,6 @@ start()
 
 stop()
 {
-
-	killall -9 kcp-client
-	killall -9 udp2raw
+	kill $(cat $udp2raw_pid)
+	kill $(cat $kcptun_pid)
 }

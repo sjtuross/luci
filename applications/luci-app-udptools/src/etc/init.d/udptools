@@ -1,6 +1,9 @@
 #!/bin/sh /etc/rc.common
 START=90
 
+udp2raw_pid=/var/run/udptools_udp2raw.pid
+udpspeeder_pid=/var/run/udptools_udpspeeder.pid
+
 run_udp()
 {
 	local server
@@ -18,8 +21,9 @@ run_udp()
 	config_get password $1 password  
 	config_get fec $1 fec  
 	config_get timeout $1 timeout
-	(udp2raw -c -l127.0.0.1:21333 -r$server:$serverport --raw-mode faketcp -k $password >/tmp/udp2raw.log 2>&1 )&
-	(udpspeeder -c -l$client:$clientport -r127.0.0.1:21333 -f$fec --mode 0 --sock-buf=10240 --fix-latency --timeout $timeout --fifo /tmp/fifo.file  >/tmp/udpspeeder.log 2>&1 )&
+	(udp2raw -c -l127.0.0.1:21333 -r$server:$serverport --raw-mode faketcp -a -k $password >/tmp/udp2raw.log 2>&1 ) & echo $!>$udp2raw_pid &
+	(udpspeeder -c -l$client:$clientport -r127.0.0.1:21333 -f$fec --mode 0 --sock-buf=10240 --fix-latency --timeout $timeout --fifo /tmp/fifo.file >/tmp/udpspeeder.log 2>&1 ) & echo $!>$udpspeeder_pid &
+	ip route add $server via $(ip route | awk '$1=="default" {print $3}')
 }
 
 start()
@@ -30,7 +34,6 @@ start()
 
 stop()
 {
-    
-	killall -9 udpspeeder
-	killall -9 udp2raw
+	kill $(cat $udp2raw_pid)
+	kill $(cat $udpspeeder_pid)
 }
