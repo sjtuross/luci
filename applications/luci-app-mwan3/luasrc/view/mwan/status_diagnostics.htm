@@ -26,21 +26,6 @@
 %>
 
 <script type="text/javascript">//<![CDATA[
-	String.format = function ()
-	{
-		var param = [];
-		for (var i = 0, l = arguments.length; i < l; i++)
-		{
-			param.push(arguments[i]);
-		}
-		var statment = param[0]; // get the first element(the original statement)
-		param.shift(); // remove the first element from array
-		return statment.replace(/\{(\d+)\}/g, function(m, n)
-		{
-			return param[n];
-		});
-	}
-	
 	var stxhr = new XHR();
 
 	function update_status(iface, task)
@@ -58,7 +43,7 @@
 		stxhr.post('<%=url('admin/status/mwan')%>/diagnostics_display' + '/' + iface + '/' + task, { token: '<%=token%>' },
 			function(x)
 			{
-				output.innerHTML = String.format('<pre>{0}</pre>', x.responseText);
+				output.innerHTML = String.format('<pre>%h</pre>', x.responseText);
 			}
 		);
 	}

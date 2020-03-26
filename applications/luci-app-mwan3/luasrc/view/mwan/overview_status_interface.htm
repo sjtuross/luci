@@ -6,21 +6,6 @@
 
 <script type="text/javascript">//<![CDATA[
 
-String.format = function ()
-{
-    var param = [];
-    for (var i = 0, l = arguments.length; i < l; i++)
-    {
-        param.push(arguments[i]);
-    }
-    var statment = param[0]; // get the first element(the original statement)
-    param.shift(); // remove the first element from array
-    return statment.replace(/\{(\d+)\}/g, function(m, n)
-    {
-        return param[n];
-    });
-}
-
 function secondsToString(time) {
 	var seconds = parseInt(time, 10);
 
@@ -28,7 +13,7 @@ function secondsToString(time) {
 	seconds  -= hrs*3600;
 	var mnts = Math.floor(seconds / 60);
 	seconds  -= mnts*60;
-	return String.format("{0}h:{1}m:{2}s", hrs, mnts, seconds);
+	return String.format("%sh:%sm:%ss", hrs, mnts, seconds);
 }
 
 XHR.poll(-1, '<%=luci.dispatcher.build_url("admin", "status", "mwan", "interface_status")%>', null,
@@ -48,7 +33,7 @@ XHR.poll(-1, '<%=luci.dispatcher.build_url("admin", "status", "mwan", "interface
 						case 'online':
 							state = '<%:Online%>';
 							time = String.format(
-								'<div><strong>Uptime: </strong>{0}</div>',
+								'<div><strong>Uptime: </strong>%s</div>',
 								secondsToString(status.interfaces[iface].online)
 							);
 							css = 'success';
@@ -56,7 +41,7 @@ XHR.poll(-1, '<%=luci.dispatcher.build_url("admin", "status", "mwan", "interface
 						case 'offline':
 							state = '<%:Offline%>';
 							time = String.format(
-								'<div><strong>Downtime: </strong>{0}</div>',
+								'<div><strong>Downtime: </strong>%s</div>',
 								secondsToString(status.interfaces[iface].offline)
 							);
 							css = 'danger';
@@ -67,15 +52,15 @@ XHR.poll(-1, '<%=luci.dispatcher.build_url("admin", "status", "mwan", "interface
 							break;
 					}
 					statusview += String.format(
-						'<div class="alert-message {0}">',
+						'<div class="alert-message %s">',
 						css
 					);
 					statusview += String.format(
-						'<div><strong>Interface: </strong>{0}</div>',
+						'<div><strong>Interface: </strong>%s</div>',
 						iface
 					);
 					statusview += String.format(
-						'<div><strong>Status: </strong>{0}</div>',
+						'<div><strong>Status: </strong>%s</div>',
 						state
 					);
 					if (time)
