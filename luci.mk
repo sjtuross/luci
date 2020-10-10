@@ -36,10 +36,8 @@ LUCI_LANG.sv=Svenska (Swedish)
 LUCI_LANG.tr=Türkçe (Turkish)
 LUCI_LANG.uk=украї́нська (Ukrainian)
 LUCI_LANG.vi=Tiếng Việt (Vietnamese)
-LUCI_LANG.zh_Hans=简体中文 (Chinese Simplified)
-LUCI_LANG.zh_Hant=繁體中文 (Chinese Traditional)
-LUCI_LANG.zh-cn=$(LUCI_LANG.zh_Hans)
-LUCI_LANG.zh-tw=$(LUCI_LANG.zh_Hant)
+LUCI_LANG.zh-cn=简体中文 (Simplified Chinese)
+LUCI_LANG.zh-tw=繁体中文 (Traditional Chinese)
 
 # Submenu titles
 LUCI_MENU.col=1. Collections
@@ -49,12 +47,6 @@ LUCI_MENU.theme=4. Themes
 LUCI_MENU.proto=5. Protocols
 LUCI_MENU.lib=6. Libraries
 
-# Language aliases
-LUCI_LC_ALIAS.bn_BD=bn
-LUCI_LC_ALIAS.nb_NO=no
-LUCI_LC_ALIAS.pt_BR=pt-br
-LUCI_LC_ALIAS.zh_Hans=zh-cn
-LUCI_LC_ALIAS.zh_Hant=zh-tw
 
 PKG_NAME?=$(LUCI_NAME)
 
@@ -243,5 +235,5 @@ define LuciTranslation
 
 endef
 
-$(foreach lang,$(LUCI_LANGUAGES),$(eval $(call LuciTranslation,$(firstword $(LUCI_LC_ALIAS.$(lang)) $(lang)),$(lang))))
+$(foreach lang,$(LUCI_LANGUAGES),$(eval $(call LuciTranslation,$(lang))))
 $(foreach pkg,$(LUCI_BUILD_PACKAGES),$(eval $(call BuildPackage,$(pkg))))
