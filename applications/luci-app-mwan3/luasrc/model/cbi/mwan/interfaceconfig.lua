@@ -41,18 +41,18 @@ track_ip.datatype = "host"
 track_method = mwan_interface:option(ListValue, "track_method", translate("Tracking method"))
 track_method.default = "ping"
 track_method:value("ping")
-if os.execute("which nping 1>/dev/null") == 0 then
+if os.execute("command -v nping 1>/dev/null") == 0 then
 	track_method:value("nping-tcp")
 	track_method:value("nping-udp")
 	track_method:value("nping-icmp")
 	track_method:value("nping-arp")
 end
 
-if os.execute("which arping 1>/dev/null") == 0 then
+if os.execute("command -v arping 1>/dev/null") == 0 then
 	track_method:value("arping")
 end
 
-if os.execute("which httping 1>/dev/null") == 0 then
+if os.execute("command -v httping 1>/dev/null") == 0 then
 	track_method:value("httping")
 end
 
@@ -119,7 +119,7 @@ failure_latency:value("300")
 
 failure_loss = mwan_interface:option(Value, "failure_loss", translate("Max packet loss [%]"))
 failure_loss:depends("check_quality", 1)
-failure_loss.default = "20"
+failure_loss.default = "40"
 failure_loss:value("2")
 failure_loss:value("5")
 failure_loss:value("10")
@@ -140,7 +140,7 @@ recovery_latency:value("300")
 
 recovery_loss = mwan_interface:option(Value, "recovery_loss", translate("Min packet loss [%]"))
 recovery_loss:depends("check_quality", 1)
-recovery_loss.default = "5"
+recovery_loss.default = "10"
 recovery_loss:value("2")
 recovery_loss:value("5")
 recovery_loss:value("10")
@@ -148,7 +148,7 @@ recovery_loss:value("20")
 recovery_loss:value("25")
 
 timeout = mwan_interface:option(ListValue, "timeout", translate("Ping timeout"))
-timeout.default = "2"
+timeout.default = "4"
 timeout:value("1", translatef("%d second", 1))
 timeout:value("2", translatef("%d seconds", 2))
 timeout:value("3", translatef("%d seconds", 3))
@@ -161,7 +161,7 @@ timeout:value("9", translatef("%d seconds", 9))
 timeout:value("10", translatef("%d seconds", 10))
 
 interval = mwan_interface:option(ListValue, "interval", translate("Ping interval"))
-interval.default = "5"
+interval.default = "10"
 interval:value("1", translatef("%d second", 1))
 interval:value("3", translatef("%d seconds", 3))
 interval:value("5", translatef("%d seconds", 5))
@@ -213,7 +213,7 @@ recovery:value("3600", translatef("%d hour", 1))
 
 down = mwan_interface:option(ListValue, "down", translate("Interface down"),
 	translate("Interface will be deemed down after this many failed ping tests"))
-down.default = "3"
+down.default = "5"
 down:value("1")
 down:value("2")
 down:value("3")
@@ -227,7 +227,7 @@ down:value("10")
 
 up = mwan_interface:option(ListValue, "up", translate("Interface up"),
 	translate("Downed interface will be deemed up after this many successful ping tests"))
-up.default = "3"
+up.default = "5"
 up:value("1")
 up:value("2")
 up:value("3")

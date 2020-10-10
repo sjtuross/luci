@@ -1,14 +1,14 @@
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2019-12-10 23:15+0000\n"
-"Last-Translator: MartB <mart.b@outlook.de>\n"
+"PO-Revision-Date: 2020-07-11 21:29+0000\n"
+"Last-Translator: ssantos <ssantos@web.de>\n"
 "Language-Team: German <https://hosted.weblate.org/projects/openwrt/"
 "luciapplicationsmwan3/de/>\n"
 "Language: de\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 3.10-dev\n"
+"X-Generator: Weblate 4.2-dev\n"
 
 #: applications/luci-app-mwan3/luasrc/model/cbi/mwan/interfaceconfig.lua:176
 #: applications/luci-app-mwan3/luasrc/model/cbi/mwan/interfaceconfig.lua:192
@@ -108,7 +108,7 @@ msgstr "Alle erforderlichen IP-Regeln für die Schnittstelle %s gefunden"
 msgid "Also scan this Routing table for connected networks"
 msgstr "Auch diese Routing-Tabelle für verbundene Netzwerke scannen"
 
-#: applications/luci-app-mwan3/luasrc/view/mwan/status_diagnostics.htm:73
+#: applications/luci-app-mwan3/luasrc/view/mwan/status_diagnostics.htm:77
 msgid "Check IP rules"
 msgstr "Prüfen der IP-Regeln"
 
@@ -116,11 +116,11 @@ msgstr "Prüfen der IP-Regeln"
 msgid "Check link quality"
 msgstr "Linkqualität prüfen"
 
-#: applications/luci-app-mwan3/luasrc/view/mwan/status_diagnostics.htm:74
+#: applications/luci-app-mwan3/luasrc/view/mwan/status_diagnostics.htm:78
 msgid "Check routing table"
 msgstr "Prüfen der Routing-Tabelle"
 
-#: applications/luci-app-mwan3/luasrc/view/mwan/overview_status_interface.htm:97
+#: applications/luci-app-mwan3/luasrc/view/mwan/overview_status_interface.htm:98
 #: applications/luci-app-mwan3/luasrc/view/mwan/status_detail.htm:34
 #: applications/luci-app-mwan3/luasrc/view/mwan/status_troubleshooting.htm:34
 msgid "Collecting data..."
@@ -205,7 +205,7 @@ msgstr "Geben Sie den Wert in hex ein, beginnend mit <code>0x</code>"
 msgid "Error"
 msgstr "Fehler"
 
-#: applications/luci-app-mwan3/luasrc/view/mwan/status_diagnostics.htm:81
+#: applications/luci-app-mwan3/luasrc/view/mwan/status_diagnostics.htm:88
 msgid "Execute"
 msgstr "Ausführen"
 
@@ -237,11 +237,15 @@ msgstr "Leere Global-Firewall-Conntrack-Table bei Schnittstellen-Events"
 msgid "Globals"
 msgstr "Allgemein"
 
-#: applications/luci-app-mwan3/luasrc/view/mwan/status_diagnostics.htm:76
+#: applications/luci-app-mwan3/root/usr/share/rpcd/acl.d/luci-app-mwan3.json:3
+msgid "Grant UCI access for luci-app-mwan3"
+msgstr "Gewähre UCI Zugriff auf luci-app-mwan3"
+
+#: applications/luci-app-mwan3/luasrc/view/mwan/status_diagnostics.htm:80
 msgid "Hotplug ifdown"
 msgstr "Hotplug ifdown"
 
-#: applications/luci-app-mwan3/luasrc/view/mwan/status_diagnostics.htm:75
+#: applications/luci-app-mwan3/luasrc/view/mwan/status_diagnostics.htm:79
 msgid "Hotplug ifup"
 msgstr "Hotplug ifup"
 
@@ -282,7 +286,7 @@ msgstr "Ausgangszustand"
 #: applications/luci-app-mwan3/luasrc/model/cbi/mwan/memberconfig.lua:18
 #: applications/luci-app-mwan3/luasrc/view/mwan/status_detail.htm:10
 #: applications/luci-app-mwan3/luasrc/view/mwan/status_diagnostics.htm:10
-#: applications/luci-app-mwan3/luasrc/view/mwan/status_diagnostics.htm:62
+#: applications/luci-app-mwan3/luasrc/view/mwan/status_diagnostics.htm:61
 #: applications/luci-app-mwan3/luasrc/view/mwan/status_interface.htm:10
 #: applications/luci-app-mwan3/luasrc/view/mwan/status_troubleshooting.htm:10
 msgid "Interface"
@@ -330,7 +334,7 @@ msgstr "Letzter Ausweg"
 msgid "Load Balancing"
 msgstr "Lastverteilung"
 
-#: applications/luci-app-mwan3/luasrc/view/mwan/overview_status_interface.htm:96
+#: applications/luci-app-mwan3/luasrc/view/mwan/overview_status_interface.htm:97
 #: applications/luci-app-mwan3/luasrc/view/mwan/status_detail.htm:33
 #: applications/luci-app-mwan3/luasrc/view/mwan/status_diagnostics.htm:36
 #: applications/luci-app-mwan3/luasrc/view/mwan/status_troubleshooting.htm:33
@@ -374,7 +378,7 @@ msgstr "MWAN - Regeln"
 msgid "MWAN Interface Configuration - %s"
 msgstr "MWAN-Konfiguration, Schnittstelle - %s"
 
-#: applications/luci-app-mwan3/luasrc/view/mwan/overview_status_interface.htm:94
+#: applications/luci-app-mwan3/luasrc/view/mwan/overview_status_interface.htm:95
 msgid "MWAN Interfaces"
 msgstr "MWAN Schnittstellen"
 
@@ -499,7 +503,7 @@ msgstr ""
 msgid "No"
 msgstr "Nein"
 
-#: applications/luci-app-mwan3/luasrc/view/mwan/overview_status_interface.htm:76
+#: applications/luci-app-mwan3/luasrc/view/mwan/overview_status_interface.htm:77
 msgid "No MWAN interfaces found"
 msgstr "Keine MWAN-Schnittstellen gefunden"
 
@@ -538,7 +542,7 @@ msgstr "Nur eine IP-Regel für die Schnittstelle %s gefunden"
 msgid "Ping count"
 msgstr "Ping-Zähler"
 
-#: applications/luci-app-mwan3/luasrc/view/mwan/status_diagnostics.htm:71
+#: applications/luci-app-mwan3/luasrc/view/mwan/status_diagnostics.htm:75
 msgid "Ping default gateway"
 msgstr "Ping-Standard-Gateway"
 
@@ -563,7 +567,7 @@ msgstr "Ping-Größe"
 msgid "Ping timeout"
 msgstr "Ping-Timeout"
 
-#: applications/luci-app-mwan3/luasrc/view/mwan/status_diagnostics.htm:72
+#: applications/luci-app-mwan3/luasrc/view/mwan/status_diagnostics.htm:76
 msgid "Ping tracking IP"
 msgstr "Ping-Tracking-IP"
 
@@ -689,7 +693,7 @@ msgstr ""
 "Unterstützt CIDR-Schreibweise (z.B. \"192.168.100.0/24\") ohne "
 "Anführungsstriche"
 
-#: applications/luci-app-mwan3/luasrc/view/mwan/status_diagnostics.htm:69
+#: applications/luci-app-mwan3/luasrc/view/mwan/status_diagnostics.htm:72
 msgid "Task"
 msgstr "Aufgabe"
 
@@ -733,21 +737,21 @@ msgid ""
 msgstr ""
 "Dieser Abschnitt ermöglicht es Ihnen, den Inhalt von \"/etc/mwan3.user\" zu "
 "ändern <br />Die Datei bleibt auch während des System-Upgrades erhalten.<br /"
-"><br /><br />Anmerkung:<br />Diese Datei wird als Shell-Skript interpretiert."
-"<br />Die erste Zeile des Skripts muss &#34;#!/bin/sh&#34; ohne "
-"Anführungszeichen sein.<br />Zeilen, die mit # beginnen, sind Kommentare und "
-"werden nicht ausgeführt.<br />Setzen Sie Ihre eigene mwan3-Aktion hier, sie "
-"wird bei jedem netifd hotplug interface event ausgeführt<br />für die "
-"Schnittstell wo der mwan3 aktiviert ist.<br /><br /><br /><br />Es gibt drei "
-"Haupt Umgebungsvariablen, die an dieses Skript übergeben werden.<br /><br /"
-"><br />$ACTION <br />* \"ifup\" Wird von netifd und mwan3track "
-"ausgeführt<br />* \"ifdown\" Wird von netifd und mwan3track ausgeführt<br /"
-">* \"connected\" Wird von mwan3track ausgeführt, wenn das Tracking "
-"erfolgreich war <br />* \"disconnected\" Wird von mwan3track ausgeführt, "
-"wenn das Tracking fehlgeschlagen ist <br />$INTERFACE Name der "
-"Schnittstelle, die up oder down gegangen ist (z.B. \"wan\" oder \"wwan"
-"\")<br />$DEVICE Physischer Gerätename, dessen Schnittstelle up oder down "
-"gegangen ist (z.B. \"eth0\" oder \"wwan0\")<br /><br /><br />"
+"><br />Anmerkung:<br />Diese Datei wird als Shell-Skript interpretiert.<br /"
+">Die erste Zeile des Skripts muss &#34;#!/bin/sh&#34; ohne Anführungszeichen "
+"sein.<br />Zeilen, die mit # beginnen, sind Kommentare und werden nicht "
+"ausgeführt.<br />Setzen Sie Ihre eigene mwan3-Aktion hier, sie wird bei "
+"jedem netifd hotplug interface event ausgeführt<br />für die Schnittstell wo "
+"der mwan3 aktiviert ist.<br /><br /><br /><br />Es gibt drei Haupt "
+"Umgebungsvariablen, die an dieses Skript übergeben werden.<br /><br /><br />"
+"$ACTION <br />* \"ifup\" Wird von netifd und mwan3track ausgeführt<br />* "
+"\"ifdown\" Wird von netifd und mwan3track ausgeführt<br />* \"connected\" "
+"Wird von mwan3track ausgeführt, wenn das Tracking erfolgreich war <br />* "
+"\"disconnected\" Wird von mwan3track ausgeführt, wenn das Tracking "
+"fehlgeschlagen ist <br />$INTERFACE Name der Schnittstelle, die up oder down "
+"gegangen ist (z.B. \"wan\" oder \"wwan\")<br />$DEVICE Physischer "
+"Gerätename, dessen Schnittstelle up oder down gegangen ist (z.B. \"eth0\" "
+"oder \"wwan0\")<br /><br /><br />"
 
 #: applications/luci-app-mwan3/luasrc/model/cbi/mwan/interfaceconfig.lua:37
 msgid "Tracking hostname or IP address"

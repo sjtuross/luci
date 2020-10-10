@@ -1,14 +1,14 @@
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2020-01-14 15:23+0000\n"
-"Last-Translator: Franco Castillo <castillofrancodamian@gmail.com>\n"
-"Language-Team: Catalan <https://hosted.weblate.org/projects/openwrt/"
-"luciapplicationsmwan3/ca/>\n"
-"Language: ca\n"
+"PO-Revision-Date: 2020-06-24 17:42+0000\n"
+"Last-Translator: Petri Asikainen <uniluodossa@gmail.com>\n"
+"Language-Team: Finnish <https://hosted.weblate.org/projects/openwrt/"
+"luciapplicationsmwan3/fi/>\n"
+"Language: fi\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 3.11-dev\n"
+"X-Generator: Weblate 4.2-dev\n"
 
 #: applications/luci-app-mwan3/luasrc/model/cbi/mwan/interfaceconfig.lua:176
 #: applications/luci-app-mwan3/luasrc/model/cbi/mwan/interfaceconfig.lua:192
@@ -78,7 +78,7 @@ msgstr ""
 
 #: applications/luci-app-mwan3/luasrc/model/cbi/mwan/ruleconfig.lua:58
 msgid "-- Please choose --"
-msgstr ""
+msgstr "-- Valitse --"
 
 #: applications/luci-app-mwan3/luasrc/model/cbi/mwan/interfaceconfig.lua:66
 msgid ""
@@ -96,7 +96,7 @@ msgstr ""
 
 #: applications/luci-app-mwan3/luasrc/model/cbi/mwan/globalsconfig.lua:32
 msgid "Alert"
-msgstr ""
+msgstr "Hälytys"
 
 #: applications/luci-app-mwan3/luasrc/controller/mwan3.lua:177
 msgid "All required IP rules for interface %s found"
@@ -122,25 +122,25 @@ msgstr ""
 #: applications/luci-app-mwan3/luasrc/view/mwan/status_detail.htm:34
 #: applications/luci-app-mwan3/luasrc/view/mwan/status_troubleshooting.htm:34
 msgid "Collecting data..."
-msgstr "S’estan recollint dades…"
+msgstr "Kerätään tietoja..."
 
 #: applications/luci-app-mwan3/luasrc/model/cbi/mwan/globalsconfig.lua:33
 msgid "Critical"
-msgstr ""
+msgstr "Kriittinen"
 
 #: applications/luci-app-mwan3/luasrc/model/cbi/mwan/globalsconfig.lua:38
 msgid "Debug"
-msgstr "Depuració"
+msgstr "Debug"
 
 #: applications/luci-app-mwan3/luasrc/model/cbi/mwan/rule.lua:81
 #: applications/luci-app-mwan3/luasrc/model/cbi/mwan/ruleconfig.lua:29
 msgid "Destination address"
-msgstr ""
+msgstr "Kohdeosoite"
 
 #: applications/luci-app-mwan3/luasrc/model/cbi/mwan/rule.lua:87
 #: applications/luci-app-mwan3/luasrc/model/cbi/mwan/ruleconfig.lua:33
 msgid "Destination port"
-msgstr ""
+msgstr "Kohdeportti"
 
 #: applications/luci-app-mwan3/luasrc/view/mwan/status_detail.htm:11
 #: applications/luci-app-mwan3/luasrc/view/mwan/status_diagnostics.htm:11
@@ -154,11 +154,11 @@ msgstr ""
 #: applications/luci-app-mwan3/luasrc/view/mwan/status_interface.htm:12
 #: applications/luci-app-mwan3/luasrc/view/mwan/status_troubleshooting.htm:12
 msgid "Diagnostics"
-msgstr ""
+msgstr "Diagnostiikka"
 
 #: applications/luci-app-mwan3/luasrc/view/mwan/overview_status_interface.htm:50
 msgid "Disabled"
-msgstr ""
+msgstr "Pois käytöstä"
 
 #: applications/luci-app-mwan3/luasrc/model/cbi/mwan/interfaceconfig.lua:229
 msgid ""
@@ -167,7 +167,7 @@ msgstr ""
 
 #: applications/luci-app-mwan3/luasrc/model/cbi/mwan/globalsconfig.lua:31
 msgid "Emergency"
-msgstr ""
+msgstr "Hätä"
 
 #: applications/luci-app-mwan3/luasrc/model/cbi/mwan/interfaceconfig.lua:59
 msgid "Enable ssl tracking"
@@ -176,7 +176,7 @@ msgstr ""
 #: applications/luci-app-mwan3/luasrc/model/cbi/mwan/interface.lua:160
 #: applications/luci-app-mwan3/luasrc/model/cbi/mwan/interfaceconfig.lua:23
 msgid "Enabled"
-msgstr "Activat"
+msgstr "Käytössä"
 
 #: applications/luci-app-mwan3/luasrc/model/cbi/mwan/ruleconfig.lua:64
 msgid ""
@@ -197,7 +197,7 @@ msgstr ""
 
 #: applications/luci-app-mwan3/luasrc/model/cbi/mwan/globalsconfig.lua:34
 msgid "Error"
-msgstr ""
+msgstr "Virhe"
 
 #: applications/luci-app-mwan3/luasrc/view/mwan/status_diagnostics.htm:88
 msgid "Execute"
@@ -263,11 +263,11 @@ msgstr "IPv4"
 
 #: applications/luci-app-mwan3/luasrc/model/cbi/mwan/interfaceconfig.lua:35
 msgid "IPv6"
-msgstr ""
+msgstr "IPv6"
 
 #: applications/luci-app-mwan3/luasrc/model/cbi/mwan/globalsconfig.lua:37
 msgid "Info"
-msgstr ""
+msgstr "Tietoja"
 
 #: applications/luci-app-mwan3/luasrc/model/cbi/mwan/interfaceconfig.lua:26
 msgid "Initial state"
@@ -282,7 +282,7 @@ msgstr ""
 #: applications/luci-app-mwan3/luasrc/view/mwan/status_interface.htm:10
 #: applications/luci-app-mwan3/luasrc/view/mwan/status_troubleshooting.htm:10
 msgid "Interface"
-msgstr "Interfície"
+msgstr "Sovitin"
 
 #: applications/luci-app-mwan3/luasrc/model/cbi/mwan/interface.lua:208
 #: applications/luci-app-mwan3/luasrc/model/cbi/mwan/interfaceconfig.lua:214
@@ -300,7 +300,7 @@ msgstr ""
 
 #: applications/luci-app-mwan3/luasrc/controller/mwan3.lua:48
 msgid "Interfaces"
-msgstr ""
+msgstr "Sovittimet"
 
 #: applications/luci-app-mwan3/luasrc/model/cbi/mwan/interfaceconfig.lua:32
 msgid "Internet Protocol"
@@ -329,12 +329,12 @@ msgstr ""
 #: applications/luci-app-mwan3/luasrc/view/mwan/status_diagnostics.htm:36
 #: applications/luci-app-mwan3/luasrc/view/mwan/status_troubleshooting.htm:33
 msgid "Loading"
-msgstr "S’està carregant"
+msgstr "Ladataan"
 
 #: applications/luci-app-mwan3/luasrc/model/cbi/mwan/globalsconfig.lua:22
 #: applications/luci-app-mwan3/luasrc/model/cbi/mwan/ruleconfig.lua:63
 msgid "Logging"
-msgstr ""
+msgstr "Kirjaaminen"
 
 #: applications/luci-app-mwan3/luasrc/model/cbi/mwan/globalsconfig.lua:28
 msgid "Loglevel"
@@ -453,7 +453,7 @@ msgstr ""
 #: applications/luci-app-mwan3/luasrc/model/cbi/mwan/member.lua:33
 #: applications/luci-app-mwan3/luasrc/model/cbi/mwan/memberconfig.lua:25
 msgid "Metric"
-msgstr ""
+msgstr "Mittari"
 
 #: applications/luci-app-mwan3/luasrc/model/cbi/mwan/interfaceconfig.lua:129
 msgid "Min packet latency [ms]"
@@ -476,7 +476,7 @@ msgstr ""
 #: applications/luci-app-mwan3/luasrc/model/cbi/mwan/interface.lua:166
 #: applications/luci-app-mwan3/luasrc/model/cbi/mwan/ruleconfig.lua:50
 msgid "No"
-msgstr "No"
+msgstr "Ei"
 
 #: applications/luci-app-mwan3/luasrc/view/mwan/overview_status_interface.htm:77
 msgid "No MWAN interfaces found"
@@ -492,7 +492,7 @@ msgstr ""
 
 #: applications/luci-app-mwan3/luasrc/model/cbi/mwan/globalsconfig.lua:36
 msgid "Notice"
-msgstr ""
+msgstr "Huomaa"
 
 #: applications/luci-app-mwan3/luasrc/controller/mwan3.lua:60
 msgid "Notification"
@@ -563,7 +563,7 @@ msgstr ""
 
 #: applications/luci-app-mwan3/luasrc/model/cbi/mwan/policy.lua:51
 msgid "Policy"
-msgstr ""
+msgstr "Käytäntö"
 
 #: applications/luci-app-mwan3/luasrc/model/cbi/mwan/rule.lua:99
 #: applications/luci-app-mwan3/luasrc/model/cbi/mwan/ruleconfig.lua:66
@@ -573,7 +573,7 @@ msgstr ""
 #: applications/luci-app-mwan3/luasrc/model/cbi/mwan/rule.lua:93
 #: applications/luci-app-mwan3/luasrc/model/cbi/mwan/ruleconfig.lua:36
 msgid "Protocol"
-msgstr ""
+msgstr "Protokolla"
 
 #: applications/luci-app-mwan3/luasrc/model/cbi/mwan/interfaceconfig.lua:198
 msgid "Recovery interval"
@@ -599,7 +599,7 @@ msgstr ""
 
 #: applications/luci-app-mwan3/luasrc/model/cbi/mwan/rule.lua:59
 msgid "Rule"
-msgstr ""
+msgstr "Sääntö"
 
 #: applications/luci-app-mwan3/luasrc/controller/mwan3.lua:57
 msgid "Rules"
@@ -625,12 +625,12 @@ msgstr ""
 #: applications/luci-app-mwan3/luasrc/model/cbi/mwan/rule.lua:69
 #: applications/luci-app-mwan3/luasrc/model/cbi/mwan/ruleconfig.lua:22
 msgid "Source address"
-msgstr ""
+msgstr "Lähdeosoite"
 
 #: applications/luci-app-mwan3/luasrc/model/cbi/mwan/rule.lua:75
 #: applications/luci-app-mwan3/luasrc/model/cbi/mwan/ruleconfig.lua:26
 msgid "Source port"
-msgstr ""
+msgstr "Lähdeportti"
 
 #: applications/luci-app-mwan3/luasrc/model/cbi/mwan/ruleconfig.lua:46
 msgid "Sticky"
@@ -752,11 +752,11 @@ msgstr ""
 
 #: applications/luci-app-mwan3/luasrc/view/mwan/status_diagnostics.htm:37
 msgid "Waiting for command to complete..."
-msgstr "S’està esperant que l’ordre s’acabi…"
+msgstr "Odotetaan komennon suorittamisen päättymistä..."
 
 #: applications/luci-app-mwan3/luasrc/model/cbi/mwan/globalsconfig.lua:35
 msgid "Warning"
-msgstr ""
+msgstr "Varoitus"
 
 #: applications/luci-app-mwan3/luasrc/model/cbi/mwan/member.lua:39
 #: applications/luci-app-mwan3/luasrc/model/cbi/mwan/memberconfig.lua:29
@@ -771,7 +771,7 @@ msgstr ""
 #: applications/luci-app-mwan3/luasrc/model/cbi/mwan/interface.lua:164
 #: applications/luci-app-mwan3/luasrc/model/cbi/mwan/ruleconfig.lua:49
 msgid "Yes"
-msgstr "Sí"
+msgstr "Kyllä"
 
 #: applications/luci-app-mwan3/luasrc/model/cbi/mwan/policy.lua:80
 #: applications/luci-app-mwan3/luasrc/model/cbi/mwan/policyconfig.lua:29
